@@ -11,6 +11,12 @@ BUILD_BROKEN_DUP_RULES := true
 
 DEVICE_PATH := device/xiaomi/pyxis
 
+# Compile libhwui in performance mode
+HWUI_COMPILE_FOR_PERF := true
+
+# Use Snapdragon LLVM, if available
+TARGET_USE_SDCLANG := true
+
 # Assert
 TARGET_OTA_ASSERT_DEVICE := pyxis
 
@@ -26,6 +32,10 @@ TARGET_KERNEL_CONFIG := pyxis_defconfig
 
 # HIDL
 DEVICE_MANIFEST_FILE += $(DEVICE_PATH)/manifest.xml
+
+# Fingerprint on display
+TARGET_SURFACEFLINGER_FOD_LIB := //device/xiaomi/sdm710-common:libfod_extension.xiaomi_sdm710
+TARGET_USES_FOD_ZPOS := true
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 134217728

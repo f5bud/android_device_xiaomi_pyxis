@@ -115,8 +115,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/nfc/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
 # PocketMode
-PRODUCT_PACKAGES += \
-    XiaomiPocketMode
+# PRODUCT_PACKAGES += \
+#     XiaomiPocketMode
 
 # Secure element
 PRODUCT_PACKAGES += \
